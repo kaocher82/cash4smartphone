@@ -1,0 +1,130 @@
+h1 {
+  text-align: center;
+  background-color: yellow;
+
+  padding-top: 30px;
+  text-decoration-style: solid;
+  background-size: auto;
+
+}
+
+
+.button {
+
+  border-radius: 4px;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 2px;
+  background-color: #4CAF50; /* Green */
+  color: white;
+  padding: 15px 32px;
+  text-decoration: none;
+  display: inline-block;
+
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+#main_page_img {
+  margin: auto; 50px;
+  background-position: center;
+  background-size: auto;
+  background-color: white;
+  background-position: bottom;
+}
+
+img {
+  background: 100pc;
+  
+}
+
+#x001 {
+  background-position: center;
+}
+
+#x002 {
+  background-size: 300px;
+  color: red;
+  background-position: right;
+}
+
+.x003 {
+  background: 300px;
+  padding-bottom: 20px;
+  background-color: red;
+}
+
+x005 {
+  background-position: left;
+  background-color: black;
+  shape-margin: 5px
+}
+x006 {
+  background-position: right;
+  background-color:red;
+  shape-margin: 5px
+  display: flex;
+  flex-wrap: wrap;
+}
+
+x007 {
+  background-position: center;
+  background-color: pink;
+  shape-margin: 5px
+}
+
+x008 {
+  background-position: center;
+  background-color: Green;
+  shape-margin: 5px
+}
+
+x009 {
+  background-position: center;
+  background-color: yellow;
+  shape-margin: 5px
+}
+
+
+
+li {
+
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  text-decoration: line-through;
+  background-size: 400px;
+  background-color: #f4511e;
+  display: flex;
+  height: 200px;
+  align-items: center;
+}
