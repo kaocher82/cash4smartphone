@@ -18,6 +18,8 @@ clone env and root in same folder
 use tarminal
 
 source env/bin/activate
+
+
 to run a test server 
 
 cd root
