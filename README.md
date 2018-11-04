@@ -9,3 +9,18 @@ Same website in few different web frameworks
 4. Vue Js
 
 
+Details for Django 
+
+virtualenv is env for Django 
+
+To activate this virtualenv 
+clone env and root in same folder 
+use tarminal
+
+source env/bin/activate
+to run a test server 
+
+cd root
+python manage.py runserver
+
+
