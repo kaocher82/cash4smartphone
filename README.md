@@ -23,6 +23,7 @@ source env/bin/activate
 to run a test server 
 
 cd root
+
 python manage.py runserver
 
 
