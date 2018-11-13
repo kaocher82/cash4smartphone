@@ -91,10 +91,11 @@ class Phones(models.Model):
 
     def __str__(self):
         return f" {self.Brand} {self.PhoneModel} {self.color} {self.internal_memory} {self.RAM}"
-
+'''
 class Products(models.Model):
     brand_name = models.ForeignKey(Brands, on_delete=models.CASCADE)
     model_name = models.ForeignKey(Phones, on_delete=models.CASCADE)
 
     def __str__(self):
         return f"{self.set(brand_name)} {self.set(model_name)}"
+'''

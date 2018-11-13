@@ -11,11 +11,12 @@ from .models import Phones
 
 def index(request):
     context = {
-        "brand_list": Brands.objects.all()
+        "brand_list": Brands.objects.all(),
+        "Phone_list": Phones.objects.all()
     }
 
     return render(request, "index.html", context)
-
+'''
 def BrandPhone(request, Brands_id):
     try:
         Brand_phone = Phones.object.get(pk=Brands_id)
@@ -25,3 +26,4 @@ def BrandPhone(request, Brands_id):
         "Phone_list": phones
     }
     return render(request, "brand.html", context)
+'''

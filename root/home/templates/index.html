@@ -8,7 +8,7 @@
 <h1> brands Names</h1>
   <ul>
     {% for Brands in brand_list %}
-    <li><a href="{% url 'phones' Brands_manufacturer %}"> {{ manufacturer }} </a> </li>
+    <li>{{ Brands.manufacturer }}</li>
     {% endfor %}
   </ul>
 
@@ -18,4 +18,6 @@
     {% endfor %}
   </ol>
   </body>
+
+
 </html>
