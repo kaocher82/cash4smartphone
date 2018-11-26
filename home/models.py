@@ -14,7 +14,7 @@ class Brands(models.Model):
     )
     catagory = models.CharField(max_length=20, choices=Catagory)
     def __str__(self):
-        return f"{self.manufacturer} Company {self.catagory} "
+        return f"{self.manufacturer} - {self.catagory} "
 '''
 class ProductDetails(models.Model):
     storage = models.IntegerField(max_length=3)
