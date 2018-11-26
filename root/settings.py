@@ -5,7 +5,7 @@ SECRET_KEY = '+7+_madk0v#1*k!ydj3iynci-^h_j4_b_3dr*b-u4b=7tib0ko'
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'home.apps.HomeConfig',
