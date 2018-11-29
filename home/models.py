@@ -1,20 +1,26 @@
 from django.db import models
 
 # Create your models here.
-
-class Brands(models.Model):
-    manufacturer = models.CharField(max_length=40)
-    Catagory = (
+'''
+class Catagory(models.Model)
+    catagory = (
         ( 'Mobile', 'Phone'),
         ( 'Laptop', 'Computer'),
         ( 'Camera', 'DSLR'),
         ( 'Pad', 'Tablet'),
         ('Smart Watch', 'Watch'),
         ('Electronis', 'Home Appliance'),
-    )
-    catagory = models.CharField(max_length=20, choices=Catagory)
+        )
+        catagory = models.CharField(max_length=20, choices=Catagory)
+        def __str__(self):
+            return f"{self.catagory}"
+    '''
+class Brands(models.Model):
+    manufacturer = models.CharField(max_length=40)
+
+
     def __str__(self):
-        return f"{self.manufacturer} - {self.catagory} "
+        return f"{self.manufacturer}"
 '''
 class ProductDetails(models.Model):
     storage = models.IntegerField(max_length=3)
@@ -30,6 +36,15 @@ class ProductDetails(models.Model):
 
 
 class Phones(models.Model):
+    Catagory = (
+        ( 'Mobile', 'Phone'),
+        ( 'Laptop', 'Computer'),
+        ( 'Camera', 'DSLR'),
+        ( 'Pad', 'Tablet'),
+        ('Smart Watch', 'Watch'),
+        ('Electronis', 'Home Appliance'),
+    )
+    catagory = models.CharField(max_length=20, choices=Catagory)
     Brand = models.ForeignKey(Brands, on_delete=models.CASCADE)
     PhoneModel = models.CharField(max_length=40)
     OS = (
