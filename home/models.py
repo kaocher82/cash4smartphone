@@ -1,52 +1,63 @@
+from django.conf import settings
 from django.db import models
-
+from django.utils import timezone
+from django.urls import resolvers
 # Create your models here.
+
+class CatagoryManager(models.Manager):
+    def create_Catagory(self, catagory):
+        Catagory = self.create(catagory=catagory)
+        return Catagory
 '''
-class Catagory(models.Model)
-    catagory = (
-        ( 'Mobile', 'Phone'),
-        ( 'Laptop', 'Computer'),
-        ( 'Camera', 'DSLR'),
-        ( 'Pad', 'Tablet'),
-        ('Smart Watch', 'Watch'),
-        ('Electronis', 'Home Appliance'),
-        )
-        catagory = models.CharField(max_length=20, choices=Catagory)
-        def __str__(self):
-            return f"{self.catagory}"
-    '''
-class Brands(models.Model):
-    manufacturer = models.CharField(max_length=40)
-
-
+    catagory = models.CharField(max_length=20, primary=True)
     def __str__(self):
-        return f"{self.manufacturer}"
+        return f"{self.catagory}"
 '''
-class ProductDetails(models.Model):
-    storage = models.IntegerField(max_length=3)
-    camera = models.IntegerField(max_length=3)
-    ram = models.IntegerField(max_length=3)
+class Catagory(models.Model):
+    catagory = models.CharField(max_length=20, primary_key=True)
+    objects = CatagoryManager()
     def __str__(self):
-        return f"Rom {self.storage} GB"
+        return self.catagory
+#x = X.objects.create_X("Pride and Prejudice")
+
+class BrandManager(models.Manager):
+    def create_Brand(self, manufacturer):
+        Brand = self.create(manufacturer=manufacturer)
+        return Brand
+    
+class Brand(models.Model):
+    manufacturer = models.CharField(max_length=40, primary_key=True)
+    objects = BrandManager()
     def __str__(self):
-        return f"RAM {self.ram} GB"
-    def __str__(self):
-        return f"Camera {self.camera} MP"
+        return self.manufacturer
+
+
+class ProductManager(models.Manager):
+    def with_counts(self):
+        from django.db import connection
+        with connection.cursor() as cursor:
+            cursor.execute()
+            result_list = []
+'''          
+            def create_Product(self, Catagory, Brand, PhoneModel):
+                def __str__(self):
+                    Catagory = self.catagory 
+                    Brand = self.brand
+                    PhoneModel = self.PhoneModel
+                    Product = self.create_Product(self, catagory, brand, PhoneModel)
+                    return PhoneModel
+
+                    def __str__(self):
+                        BrandManager = PhoneModel in brand
+                        CatagoryManager = brand in Catagory
 '''
 
 
-class Phones(models.Model):
-    Catagory = (
-        ( 'Mobile', 'Phone'),
-        ( 'Laptop', 'Computer'),
-        ( 'Camera', 'DSLR'),
-        ( 'Pad', 'Tablet'),
-        ('Smart Watch', 'Watch'),
-        ('Electronis', 'Home Appliance'),
-    )
-    catagory = models.CharField(max_length=20, choices=Catagory)
-    Brand = models.ForeignKey(Brands, on_delete=models.CASCADE)
-    PhoneModel = models.CharField(max_length=40)
+class Product(models.Model):
+    catagory = models.ForeignKey(Catagory, on_delete=models.CASCADE)
+#    catagory = models.ForeignKey(X, on_delete=models.CASCADE)
+    Brand = models.ForeignKey(Brand, on_delete=models.CASCADE)
+    PhoneModel = models.CharField(max_length=40, primary_key=True)
     OS = (
         ('A', 'Android'),
         ('I', 'IOS'),
@@ -105,7 +116,7 @@ class Phones(models.Model):
     color = models.CharField(max_length=20, choices=COLORS)
 
     def __str__(self):
-        return f" {self.Brand} {self.PhoneModel} {self.color} {self.internal_memory} {self.RAM}"
+        return f"{self.Brand} {self.PhoneModel} {self.color} {self.internal_memory} {self.RAM}"
 '''
 class Products(models.Model):
     brand_name = models.ForeignKey(Brands, on_delete=models.CASCADE)

@@ -6,13 +6,14 @@ from django.http import Http404
 
 
 # Create your views here.
-from .models import Brands
-from .models import Phones
+from .models import Brand
+from .models import Product
+from .models import Catagory
 
 def index(request):
     context = {
-        "brand_list": Brands.objects.all(),
-        "Phone_list": Phones.objects.all()
+        "brand_list": Brand.objects.all()
+#        "Phone_list": Phone.objects.all()
     }
 
     return render(request, "index.html", context)
