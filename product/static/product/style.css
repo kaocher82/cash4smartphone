@@ -1,0 +1,169 @@
+
+.items-phone {
+  max-width: 40%;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+.items-phone .h3 strong{
+  font-size: 36px;
+  font-family: 'Avenir Next LT Pro Demi';
+}
+
+.items-phone p{
+  font-size: 19px;
+  line-height: 29px;
+}
+.items-phone .item{
+  background: #ecf0f1;
+  box-shadow: 1px 0 3px rgba(0, 0, 0, 0.17);
+  padding: 45px 5px 25px;
+  margin: 15px 0;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  border-width: 1px;
+  border-style: solid;
+  min-height: 282px;
+    display: block;
+  border-color: transparent;
+  -webkit-transition: background 0.5s, border 0.5s;
+    transition: background 0.5s, border 0.5s;
+}
+.items-phone .item.item-missing{
+  border: 1px solid #69ba45;
+}
+.items-phone .item.item-missing .col-md-7{
+  display: none;
+}
+.items-phone .item.item-missing .col-md-5{
+  width: 100%;
+  text-align: center;
+}
+.items-phone .item.item-missing .col-md-5 .item-image img{
+  opacity: 0.5;
+}
+.item-image img{
+  height: 150px;
+  width: auto;
+
+}
+.items-phone .item.item-missing .col-md-5 .text-overlap{
+  font-size: 25px;
+  left: 0;
+  margin: 0 auto;
+  max-width: 140px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 40px;
+}
+.items-phone .item.item-missing .col-md-5 .missing-status{
+  font-size: 27px;
+  color:#69ba45;
+  padding-top: 17px;
+}
+.items-phone .item:hover,
+.items-phone .item.item-active{
+  background: #e2e6d8;
+  border:1px solid #69ba45;
+  cursor: pointer;
+  -webkit-transition: background 0.5s, border 0.5s;
+    transition: background 0.5s, border 0.5s;
+}
+.items-phone .item .col-md-7{
+  width: 58.33333333%;
+  float: left;
+}
+.items-phone .item .col-md-5{
+  width: 41.66666667%;
+  float: left;
+}
+.items-phone .item .h4{
+  font-size: 20px;
+  margin-bottom: 0px;
+  color:#000;
+}
+.items-phone .item p{
+  font-size: 17px;
+  color:#000;
+}
+.items-phone .item-capacity{
+  padding-top: 40px;
+  color:#000;
+}
+.items-phone .item-capacity ul{
+  margin: 0 0 0 -5px;
+  padding: 0;
+  list-style: none;
+}
+.items-phone .item-capacity ul li{
+  color:#000;
+  background: #fff;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
+  font-size: 14px;
+  width: 70px;
+  margin: 5px;
+  float: left;
+}
+.items-phone .item .item-capacity ul li:hover,
+.items-phone .item:hover .item-capacity ul li.select,
+.items-phone .item.item-active .item-capacity ul li.select{
+  background: #69ba45;
+  color:#fff;
+}
+.items-phone .item .get-paid{
+  color:#69ba45;
+  background: #fff;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
+  font-size: 14px;
+  margin: 5px 0 15px;
+  box-shadow: 1px 0 3px rgba(0, 0, 0, 0.17);
+}
+.items-phone .item:hover .btn.item-more-btn,
+.items-phone .item.item-active .btn.item-more-btn{
+  background: #69ba45;
+  color:#fff;
+  border-color: transparent;
+}
+.items-phone .item .btn.item-more-btn{
+  border: 2px solid rgba(39,39,39,0.17);
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  box-shadow: 1px 0 3px rgba(0, 0, 0, 0.17);
+}
+.items-phone .item .btn.item-more-btn i{
+  font-size: 20px;
+  width: 12px;
+}
+
+.btn {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 1px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.btn {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+}
+
+.btn:hover {
+    background-color: #4CAF50;
+    color: white;
+}

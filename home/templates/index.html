@@ -5,6 +5,11 @@
     <title></title>
   </head>
   <body>
+    {% for button in button_list %}
+    <ol>
+      <li>{{ button }} </li>
+    </ol>
+    {% endfor %}
 <h1> brands Names</h1>
   <ul>
     {% for Brands in brand_list %}

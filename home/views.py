@@ -10,6 +10,14 @@ from .models import Brand
 from .models import Product
 from .models import Catagory
 
+
+def button(request):
+    button = {
+        "button_list": Catagory.objects.all()
+    }
+    return render(request, "base.html", context=button)
+    
+    
 def index(request):
     context = {
         "brand_list": Brand.objects.all()
